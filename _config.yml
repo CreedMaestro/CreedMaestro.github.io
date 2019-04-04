@@ -59,8 +59,8 @@ descriptions:
   - cat: Kaggle
     desc: "Kaggle"
 
-  - cat: R
-    desc: "R언어"
+#  - cat: R
+#    desc: "R언어"
 
 # Social icons and sharing options
 #
