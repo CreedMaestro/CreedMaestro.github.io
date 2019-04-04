@@ -59,6 +59,9 @@ descriptions:
   - cat: Kaggle
     desc: "Kaggle"
 
+  - cat: R
+    desc: "R¾ð¾î"
+
 # Social icons and sharing options
 #
 # Social settings are used in two places:
