@@ -9,12 +9,12 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: "Creed Maestro"
-subtitle: "활자 중독의 Data Analyst"
+title: Creed Maestro
+subtitle: "Data Analyst"
 email: creedofmaestro@gmail.com
-name: "Creed Maestro"
+name: Creed Maestro
 description: >
- "Data Analysis, Text mining, Time-series analysis, kaggle"
+  Data Analysis, Text mining, Time-series analysis, kaggle
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -40,11 +40,11 @@ jekyll-archives:
     category: '/category/:name/'
     tag: '/tag/:name/'
 
- Disqus comments
- disqus_shortname: "CreedMaestro"
+Disqus comments
+disqus_shortname: "CreedMaestro"
 
- Google analytics
- ga_tracking_id: "UA-137712141-1"
+Google analytics
+ga_tracking_id: "UA-137712141-1"
 
 # Category descriptions (for archive pages)
 descriptions:
