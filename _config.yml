@@ -54,7 +54,7 @@ descriptions:
   - cat: dummy
     desc: "Just some placeholder posts, lorem ipsum and the rest."
 
-   - cat: Kaggle
+  - cat: Kaggle
     desc: "Kaggle"
 
 # Social icons and sharing options
