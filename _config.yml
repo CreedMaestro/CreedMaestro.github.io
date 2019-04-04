@@ -9,12 +9,12 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Centrarium
-subtitle: "Data Analyst"
-email: blcentra@gmail.com
-name: Ben Centra
+title: Creed Maestro
+subtitle: "활자 중독의 Data Analyst"
+email: creedofmaestro@gmail.com
+name: Creed Maestro
 description: >
-  A simple yet classy theme for your Jekyll website or blog.
+Data Analysis, Text mining, Time-series analysis, kaggle
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -40,8 +40,8 @@ jekyll-archives:
     category: '/category/:name/'
     tag: '/tag/:name/'
 
-# Disqus comments
-# disqus_shortname: bencentra
+ Disqus comments
+ disqus_shortname: CreedMaestro
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
@@ -53,6 +53,9 @@ descriptions:
 
   - cat: dummy
     desc: "Just some placeholder posts, lorem ipsum and the rest."
+
+   - cat: Kaggle
+    desc: "Kaggle"
 
 # Social icons and sharing options
 #
@@ -70,12 +73,12 @@ descriptions:
 #     desc: Follow me on Twitter            # Description to display as link title, etc
 #     share: true                           # Include in the "Share" section of posts
 social:
-  - name: Twitter
-    icon: twitter
-    username: TheBenCentra
-    url: https://twitter.com/TheBenCentra
-    desc: Follow me on Twitter
-    share: true
+#  - name: Twitter
+#   icon: twitter
+#    username: TheBenCentra
+#    url: https://twitter.com/TheBenCentra
+#    desc: Follow me on Twitter
+#    share: true
 
   - name: Facebook
     icon: facebook
@@ -86,8 +89,8 @@ social:
 
   - name: GitHub
     icon: github
-    username: bencentra
-    url: https://github.com/bencentra
+    username: CreedMaestro
+    url: https://github.com/creedmaestro
     desc: Fork me on GitHub
     share: false
 
