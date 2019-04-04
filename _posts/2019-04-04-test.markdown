@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Test Page"
+date:   2019-04-04 14:51:25 +0900
+categories: kaggle, ipsum
+---
+ testing
