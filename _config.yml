@@ -40,10 +40,10 @@ jekyll-archives:
     category: '/category/:name/'
     tag: '/tag/:name/'
 
-Disqus comments
+# Disqus comments
 disqus_shortname: "CreedMaestro"
 
-Google analytics
+# Google analytics
 ga_tracking_id: "UA-137712141-1"
 
 # Category descriptions (for archive pages)
