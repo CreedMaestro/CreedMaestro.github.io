@@ -2,7 +2,6 @@
 title: "Titanic Kaggle with R"
 author: "Maestro"
 date: "2019/03/12"
-categories: posts
 tags: Kaggle, R
 output: 
   md_document:
