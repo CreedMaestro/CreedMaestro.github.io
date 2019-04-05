@@ -1,4 +1,4 @@
-# External gems
+﻿# External gems
 # See http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html for making `jekyll archives` work.
 gems: 
   - jekyll-archives # Sorry, not GitHub pages friendly!
@@ -10,7 +10,7 @@ exclude:
 
 # Site settings
 title: Creed Maestro
-subtitle: "�ؽ�Ʈ �׽�Ʈ"
+subtitle: "텍스트 테스트"
 email: creedofmaestro@gmail.com
 name: Creed Maestro
 description: >
