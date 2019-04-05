@@ -1,8 +1,7 @@
 ---
-title: "Titanic Kaggle with R"
+title: "Titanic Kaggle"
 author: "Maestro"
 date: "2019/03/12"
-tags: Kaggle, R
 output: 
   md_document:
     variant: markdown_github
@@ -13,8 +12,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ***
-
-[TOC]
 
 <br>
 
@@ -72,7 +69,7 @@ library(randomForest)  # For Random Forest Modeling
 <br>
   
 ### multiplot() function generation
-  
+
 <br>
 
 한 화면에 여러개 'plot'들을 표기하기 위해 'multiplot()' 함수를 사용한다.
@@ -93,7 +90,7 @@ library(randomForest)  # For Random Forest Modeling
 # If the layout is something like matrix(c(1,2,3,3), nrow=2, byrow=TRUE),
 # then plot 1 will go in the upper left, 2 will go in the upper right, and
 # 3 will go all the way across the bottom.
-#
+
 
 multiplot <- function(..., plotlist = NULL, file, cols = 1, layout = NULL) {
   library(grid)
@@ -134,7 +131,7 @@ multiplot <- function(..., plotlist = NULL, file, cols = 1, layout = NULL) {
 
 <br>
 
-##2.2 Raw data import : 데이터 원본 로드
+## 2.2 Raw data import : 데이터 원본 로드
 
 <br>
 
@@ -174,7 +171,6 @@ full  <- dplyr::bind_rows(train, test)
 
 ## 2.3 변수 의미 설명
 
-<br>
 
 각 변수의 의미와 지정한 속성은 아래 표와 같다.
 
@@ -254,9 +250,8 @@ head(full, 10)
 
 <br>
 
-###3.1.2 str()
+### 3.1.2 str()
 
-<br>
 
 ```{r}
 str(full)
@@ -274,7 +269,6 @@ data는 12열(변수) 1309행(관측치.train: 891, test: 418)이다.
 
 ### 3.1.3 summary()
 
-<br>
 
 ```{r}
 summary(full)
@@ -399,6 +393,7 @@ missing_values %>%
   # Plot의 x, y 축 변환
   coord_flip()
 ```
+
 <br>
 확인 결과 12개 변수중 총 5개에 결측치가 존재하며, 'Cabin','Age','Embarked','Fare'
 
@@ -446,12 +441,11 @@ age.p2 <- full %>%
   # 위에서 생성한 2개의 그래프를 한 화면에 축력
   multiplot(age.p1, age.p2, layout = multi.layout)
 ```
-  
+
 <br>
 
 ## 3.4 Pclass
 
-<br>
 
 각 'Pclass'에 해당하는 탑승객의 빈도수 시각화.
 
@@ -532,7 +526,6 @@ full %>%
 
 ## 3.6 Sex
 
-<br>
 
 성별간 생존율 차이의 시각화
 
@@ -1053,6 +1046,6 @@ write.csv(submit, file = './titanic_submit.csv', row.names = F)
 <br>
 
 # 8. 원문 링크 
-- https://www.kaggle.com/redhorse93/r-titanic-data
+[링크] (https://www.kaggle.com/redhorse93/r-titanic-data)
 
 <br>
