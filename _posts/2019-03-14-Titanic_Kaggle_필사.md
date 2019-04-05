@@ -1,15 +1,16 @@
 ---
 title: "Titanic Kaggle with R"
-author: "Maestro"
+author: "Creed Maestro"
 date: "2019/03/12"
 categories: Kaggle
 tags: Kaggle
+layout: post
 output: 
   md_document:
     variant: markdown_github
 ---
 
-```{r setup, include=FALSE}
+```{r}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -42,7 +43,7 @@ https://www.kaggle.com/redhorse93/r-titanic-data
 
 <br>
 
-```{r message=FALSE, warning=FALSE}
+```{r}
 # Data input, assement: 데이터 로드, 확인
 library(tidyverse)     # R의 통합 패키지로 여기서는 'readr'패키지를 쓰기 위함이다.
 library(descr)         # descr::CrossTable() - 범주별 빈도수, 비율 수치로 확인
@@ -146,7 +147,7 @@ Pre-processing 할 때 동일하게 작업하기 위해서이다.
 
 <br>
 
-```{r warning=FALSE, message=FALSE}
+```{r}
 train <- readr::read_csv("./input/train.csv")
 
 test  <- readr::read_csv("./input/test.csv")
@@ -412,7 +413,7 @@ missing_values %>%
 
 <br>
 
-```{r message=FALSE, warning=FALSE}
+```{r}
 age.p1 <- full %>% 
   ggplot(aes(Age)) +
   # 히스토그램 작성, 설정
@@ -456,7 +457,7 @@ age.p2 <- full %>%
 
 <br>
 
-```{r message=FALSE, warning=FALSE}
+```{r}
 full %>% 
   # dplyr::group_by(), summarize() 를 이용해서 Pclass 빈도수 구하기
   group_by(Pclass) %>% 
@@ -491,7 +492,7 @@ full %>%
 
 티켓값 'Fare' 시각화, histogram & boxplot으로 표현
 
-```{r message=FALSE, warning=FALSE}
+```{r}
   # Histogram
   Fare.p1 <- full %>% 
     ggplot(aes(Fare)) +
@@ -1011,7 +1012,7 @@ varImpPlot(titanic.rf)
 
 <br>
 
-```{r eval=FALSE}
+```{r}
 # Prediction
 pred.rf <- predict(object = titanic.rf, newdata = test, type = "class")
 
