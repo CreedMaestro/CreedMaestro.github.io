@@ -10,10 +10,6 @@ output:
     variant: markdown_github
 ---
 
-```{r}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ***
 
 <br>
@@ -1048,6 +1044,7 @@ write.csv(submit, file = './titanic_submit.csv', row.names = F)
 <br>
 
 # 8. 원문 링크 
-[링크] (https://www.kaggle.com/redhorse93/r-titanic-data)
+
+[원문 링크](https://www.kaggle.com/redhorse93/r-titanic-data)
 
 <br>

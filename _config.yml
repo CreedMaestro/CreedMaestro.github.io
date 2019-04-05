@@ -57,7 +57,10 @@ descriptions:
     desc: "Just some placeholder posts, lorem ipsum and the rest."
 
   - cat: Kaggle
-    desc: "Kaggle"
+    desc: "Kaggle competition, kernel"
+
+  - cat: R
+    desc: "R Language"
 
 # Social icons and sharing options
 #
@@ -82,12 +85,12 @@ social:
 #    desc: Follow me on Twitter
 #    share: true
 
-  - name: Facebook
-    icon: facebook
-    username: thebencentra
-    url:
-    desc: Friend me on Facebook
-    share: true
+#  - name: Facebook
+#    icon: facebook
+#    username: thebencentra
+#    url:
+#    desc: Friend me on Facebook
+#    share: true
 
   - name: GitHub
     icon: github
