@@ -10,4 +10,4 @@ _site
 .bundle/
 vendor/
 
-Backup# _site_backup
+Backup# site_site_backup
