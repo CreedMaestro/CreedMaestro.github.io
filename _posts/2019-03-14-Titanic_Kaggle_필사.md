@@ -1,9 +1,9 @@
 ---
-title: "Titanic Kaggle with R"
+title: "Titanic Kaggle with R 필사"
 author: "Creed Maestro"
 date: "2019/03/12"
 categories: Kaggle
-tags: Kaggle
+tags: Kaggle, R, 타이타닉, 캐글
 layout: post
 output: 
   md_document:
