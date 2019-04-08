@@ -3,7 +3,7 @@ title: "House Prices Prediction with R (한글 번역) Introduction ~ 데이터 
 author: "Maestro"
 date: "2019/03/19"
 categories: Kaggle
-tags: Kaggle
+tags: Kaggle, R, 집값 예측
 layout: post
 output: 
   md_document:
@@ -11,11 +11,10 @@ output:
     
 ---
 
-
-
 ***
+<br>
 
-#1 Introduction
+# 1 Introduction
 
  kaggle의 'House price prediction' 대회이며, R 커널 번역 & 의역 필사본이다.
 역자 첨언은 "참조), 첨)"으로 표시하였다.
@@ -23,6 +22,7 @@ output:
 원문 링크는 아래에 첨부하며, 필사는 Rmd파일이지만, 깃헙 블로그 특성상 md 파일만 올라가기에 가독성을 위해 약간의 수정을 했다.
 Rstudio상으로 돌려보길 원하시는 분들은 아래에 커널 링크를 달아둘테니 거기서 확인바란다.
 [캐글링크](https://www.kaggle.com/maestroyi/house-prices-prediction-with-r-to-korean/report?scriptVersionId=12633146)
+
 코드가 너무 길어 3편으로 분할하여 올린다.
 1. Introduction ~ 데이터 구조, 대표 변수 확인
 2. EDA, FE
