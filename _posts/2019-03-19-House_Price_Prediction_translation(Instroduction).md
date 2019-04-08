@@ -1,7 +1,7 @@
 ---
 title: "House Prices Prediction with R (한글 번역) Introduction ~ 데이터 구조, 대표 변수 확인"
 author: "Maestro"
-date: "2019년 3월 19일"
+date: "2019/03/19"
 categories: Kaggle
 tags: Kaggle
 layout: post

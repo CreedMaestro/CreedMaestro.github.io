@@ -1,7 +1,7 @@
 ---
 title: "House Prices Prediction with R (한글 번역) EDA & FE "
 author: "Maestro"
-date: "2019년 3월 20일"
+date: "2019/03/20"
 categories: Kaggle
 tags: Kaggle
 layout: post
