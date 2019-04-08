@@ -5,6 +5,9 @@ date: "2019년 3월 20일"
 categories: Kaggle
 tags: Kaggle
 layout: post
+output: 
+  md_document:
+    variant: markdown_github
 
 ---
 
