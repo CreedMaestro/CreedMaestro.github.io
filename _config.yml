@@ -97,7 +97,7 @@ social:
     username: CreedMaestro
     url: https://github.com/creedmaestro
     desc: Fork me on GitHub
-    share: false
+    share: true
 
   - name: LinkedIn
     icon: linkedin

@@ -13,10 +13,10 @@ output:
 
 
 
-#5 Missing data, label encoding, and factorizing variables
+# 5 Missing data, label encoding, and factorizing variables
 [캐글 Rmd 링크](https://www.kaggle.com/maestroyi/house-prices-prediction-with-r-to-korean/report?scriptVersionId=12633146)
 
-##5.1 Completeness of the data
+## 5.1 Completeness of the data
 
  우선 결측치를 포함한 변수들부터 확인해 보겠다.
 
@@ -29,7 +29,7 @@ cat('There are', length(NAcol), 'columns with missing values')
  'SalePrice'의 1459개의 결측치는 test 셋의 수와 완벽하게 일치한다. 이건 34개의 독립 변수에서 NA를 수정해야 한다는 것을 의미한다.
 <br>
 
-##5.2 Imputing missing data {.tabset}
+## 5.2 Imputing missing data {.tabset}
 
  결측치가 포함된 34개 독립 변수를 수정할려고 한다. 개수의 내림차순으로 작업을 할 것이다. 다른 변수와 유의미한 관계를 갖는 변수를 찾는다면, 그룹핑 할 것이다. 예를 들어 Pool, Garage, Basement 같은 변수들은 여러 변수가 있다.
 변수가 많아 탭으로 구분 지어 놓으니 그저 넘기지말고 필요한 것들 만이라도 읽어주길 바란다.
@@ -38,7 +38,7 @@ Garage와 Basement는 유무의 차이에 의미가 있어 이 두 섹션은 확
 'one-hot-encoding'(model.matrix 함수)을 써서 factor를 numeric으로 변환할 것이다.
 
 
-###5.2.1 Pool variables
+### 5.2.1 Pool variables
 
 **Pool Quality and the PoolArea variable**
 
@@ -86,7 +86,7 @@ all$PoolQC[2600] <- 2
 
 
 
-###5.2.2 Miscellaneous Feature
+### 5.2.2 Miscellaneous Feature
 
 **Miscellanuous feature not coverd in other categories**
 
@@ -116,7 +116,7 @@ table(all$MiscFeature)
 
 
 
-###5.2.3 Alley
+### 5.2.3 Alley
 
 ** type of alley access to property **
 
@@ -138,7 +138,7 @@ table(all$Alley)
 
 
 
-###5.2.4 Fence 
+### 5.2.4 Fence 
 
 ** Fence quality **
 
@@ -166,7 +166,7 @@ all$Fence <- as.factor(all$Fence)
 
 
 
-###5.2.5 Fireplace variables
+### 5.2.5 Fireplace variables
 
 ** Fireplace quality, and Number of fireplaces **
 
@@ -202,7 +202,7 @@ sum(table(all$Fireplaces)) #합산한 개수가 변수의 총 개수와 같은�
 
 **탭으로 구분지었기에 위로 돌아가서 다른 탭들을 확인바란다.**
 
-###5.2.6 Lot variables
+### 5.2.6 Lot variables
 
  3개의 변수가 있으며 이 중 하나는 결측치가 있고, 2개는 결측치가 없다.
 
@@ -268,7 +268,7 @@ sum(table(all$LotConfig))
 
 
 
-###5.2.7 Garage variables
+### 5.2.7 Garage variables
 
 ** Garage 관련 7개 변수가 있다 **
 
@@ -396,7 +396,7 @@ table(all$GarageCond)
 ```
 
 
-###5.2.8 Basement variables
+### 5.2.8 Basement variables
 
 ** Basement 관련 변수는 11개이다 **
 
@@ -580,7 +580,7 @@ all$TotalBsmtSF[is.na(all$TotalBsmtSF)] <- 0
 ```
 
 
-###5.2.9 Masonry variables
+### 5.2.9 Masonry variables
 
 ** Masonry veneer type, and masonry veneer area **
 
@@ -598,7 +598,7 @@ all[is.na(all$MasVnrType) & !is.na(all$MasVnrArea), c('MasVnrType', 'MasVnrArea'
 ```
 
 ```{r}
-#veneer type의 결측치를 최빈도값으로 대체하자
+# veneer type의 결측치를 최빈도값으로 대체하자
 all$MasVnrType[2611] <- names(sort(-table(all$MasVnrType)))[2] #최빈도는 'none'이라 두번째 빈도로 했다.
 all[2611, c('MasVnrType', 'MasVnrArea')]
 ```
@@ -641,7 +641,7 @@ all$MasVnrArea[is.na(all$MasVnrArea)] <- 0
 ```
 
 
-###5.2.10 MS Zoning
+### 5.2.10 MS Zoning
 
 ** MSZoning: 용도별 지구 식별자 **
 
@@ -665,7 +665,7 @@ sum(table(all$MSZoning))
 ```
 
 
-###5.2.11 Kitchen variables
+### 5.2.11 Kitchen variables
 
 ** Kitchen quality and number of Kitchens above grade **
 
@@ -700,7 +700,7 @@ sum(table(all$KitchenAbvGr))
 
 **탭으로 구분지었기에 위로 돌아가서 다른 탭들을 확인바란다.**
 
-###5.2.12 Utilities
+### 5.2.12 Utilities
 
 ** Utilities: 사용할 수 있는 Utilities의 종류 **
 
@@ -722,7 +722,7 @@ all$Utilities <- NULL
 ```
 
 
-###5.2.13 Home functionality
+### 5.2.13 Home functionality
  
 ** Functional: 홈 기능 **
  
@@ -747,7 +747,7 @@ sum(table(all$Functional))
 ```
 
 
-###5.2.14 Exterior variables
+### 5.2.14 Exterior variables
 
 ** 건물 외장 변수로 4개가 있다. **
 
@@ -846,7 +846,7 @@ sum(table(all$ExterCond))
 ```
 
 
-###5.2.15 Electrical system
+### 5.2.15 Electrical system
 
 ** Electrical: 전기 시스템 **
 
@@ -867,7 +867,7 @@ sum(table(all$Electrical))
 ```
 
 
-###5.2.16 SaleType and Condition
+### 5.2.16 SaleType and Condition
 
 ** SaleType: 판매 방식 **
 
@@ -910,7 +910,7 @@ sum(table(all$SaleCondition))
 ```
 
 
-##5.3 Label encoding/ factorizing the ramaining character variables {.tabset}
+## 5.3 Label encoding/ factorizing the ramaining character variables {.tabset}
 
  결측치는 다 살펴보았지만, character 타입이었던 변수들은 아직 확인이 되지 않았다.
 그래서 이번에도 탭으로 구분하여 살펴 보겠다.
@@ -921,7 +921,7 @@ Charcol
 cat('There are', length(Charcol), 'remaining columns with character values')
 ```
 
-###5.3.1 Foundation
+### 5.3.1 Foundation
 
 ** Foundation: 건물 기초(토대)의 종류 **
 
@@ -940,7 +940,7 @@ sum(table(all$Foundation))
 ```
 
 
-###5.3.2 Heating and airco
+### 5.3.2 Heating and airco
 
  2개의 Heating 변수와, 1개의 에어컨 변수(Y/N)가 있다.
 
@@ -987,7 +987,7 @@ sum(table(all$CentralAir))
 ```
 
 
-###5.3.3 Roof
+### 5.3.3 Roof
 
  2개의 변수가 있다.
 
@@ -1026,7 +1026,7 @@ sum(table(all$RoofMatl))
 ```
 
 
-###5.3.4 Land
+### 5.3.4 Land
 
  부지가 평지인지, 비탈인지 2개의 변수가 있다.
 
@@ -1057,7 +1057,7 @@ table(all$LandSlope)
 sum(table(all$LandSlope))
 ```
 
-###5.3.5 Dwelling
+### 5.3.5 Dwelling
 
  주거에 따른 2개의 변수가 있다.
 
@@ -1105,7 +1105,7 @@ table(all$HouseStyle)
 sum(table(all$HouseStyle))
 ```
 
-###5.3.6 Neighborhood and Conditions
+### 5.3.6 Neighborhood and Conditions
 
  물리적 거리, 근방의 입지에 따른 3개의 변수가 있다.
 
@@ -1182,7 +1182,7 @@ table(all$Condition2)
 sum(table(all$Condition2))
 ```
 
-###5.3.7 Pavement of Street & Driveway
+### 5.3.7 Pavement of Street & Driveway
 
  2개의 변수가 있다.
 
@@ -1213,12 +1213,12 @@ sum(table(all$PavedDrive))
 
 ** character형 변수에 대한 인코딩 변환과 설명은 여기까지다 **
 
-##5.4 Changing some numeric variables into factors
+## 5.4 Changing some numeric variables into factors
 
  3개의 변수를 제외하고 모든 변수들은 결측이 없이 완벽하다. 문자형은 라벨링하여 factor형으로 변환했다.
 남은 3개의 변수는 실질적으론 범주형 변수이지만, 형식은 숫자형이다.
 
-###5.4.1 Year and Month Sold
+### 5.4.1 Year and Month Sold
 
  판매 연도에서 YearBuilt(or remodeled)의 범주는 오래된 집이 가치가 낮게 되어있다. 5년치 판매의 얘기를 해보자. 여기에는 경제 위기가 있던 해가 포함되었고, 그걸 기준으로 2007년 대비 2009년(경제 위기 이후)의 집값이 매우 낮아 보인다. 모델링 전에 YrSold 변수를 factor로 변환할것이지만, Age 변수를 만들기 위해 수치형 변수도 필요하다. 그래서 아직은 factor로 변환하지 않고 두겠다.
 'Month Sold'도 정수형 변수이지만, 12월은 1월보다 좋지 않다. 따라서 MoSold는 factor로 변환하겠다.
@@ -1252,7 +1252,7 @@ ms <- ggplot(all[!is.na(all$SalePrice),], aes(x = MoSold, y = SalePrice)) +
 grid.arrange(ys, ms, widths = c(1,2))
 ```
 
-###5.4.2 MSSubClass
+### 5.4.2 MSSubClass
 
 ** MSSubClass: 판매와 연관된 주거 타입 **
 
@@ -1286,7 +1286,7 @@ all$MSSubClass <- revalue(all$MSSubClass, c('20'='1 story 1946+', '30'='1 story 
 str(all$MSSubClass)
 ```
 
-#6 Visualization of important variables
+# 6 Visualization of important variables
 
  끝이 보인다. 모든 문자형 변수를 범주형 factor나, 라벨링하여 숫자형으로 인코딩했다.
 더해서, 3개의 수치형 변수는 factor로 변환했고, 1개 변수(Utilities)는 삭제했다.
@@ -1299,7 +1299,7 @@ cat('There are', length(numericVars), 'numeric variables, and', length(factorVar
     'categoric variables')
 ```
 
-##6.1 Correlations again
+## 6.1 Correlations again
 
  상관 계수를 다시 확인해 보니, 상관 계수 0.5 이상의 변수가 10개에서 16개로 늘었다.
 
@@ -1322,7 +1322,7 @@ corrplot.mixed(cor_numVar,
                )
 ```
 
-##6.2 Finding variable importance with a quick Random Forest
+## 6.2 Finding variable importance with a quick Random Forest
 
  상기의 상관 행렬은 가장 중요한 수치형 변수와 그 변수들 사이의 다중공선성을 잘 보여주지만,
 시각화를 하기 전에 범주형 변수까지 포함하여 가장 중요한 변수에 대한 개요를 얻고 싶었다.
@@ -1349,7 +1349,7 @@ ggplot(imp_DF[1:20,],
 
  가장 중요한 변수중 3개만이 범주형이다. 'Neighborhood', 'MSSubClass', 'GarageType'
 
-###6.2.1 Above Ground Living Area, and other surface related variables (in square feet)
+### 6.2.1 Above Ground Living Area, and other surface related variables (in square feet)
 
  처음 데이터를 볼 때 Above Ground Living Area와 SalePrice 변수간의 연관성은 이미 확인했지만,
 그 분포를 다시 나타내겠다. 이번 섹션에서 'Square feet' 연관 변수중 측정된 상위 20개의 값으로 번들을 만들겠다.
@@ -1392,7 +1392,7 @@ cor(all$GrLivArea, (all$X1stFlrSF + all$X2ndFlrSF + all$LowQualFinSF))
 head(all[all$LowQualFinSF > 0, c('GrLivArea', 'X1stFlrSF', 'X2ndFlrSF', 'LowQualFinSF')])
 ```
 
-###6.2.2 The most important categorical variables; Neighborhood
+### 6.2.2 The most important categorical variables; Neighborhood
 
  처음의 그래프는 Neighborhood의 SalePrice 중위값을 보여준다. 
 <br>
@@ -1417,7 +1417,7 @@ n2 <- ggplot(all, aes(x = Neighborhood)) +
 grid.arrange(n1, n2)
 ```
 
-###6.2.3 Overall Quality, and other Quality variables
+### 6.2.3 Overall Quality, and other Quality variables
 
  처음 데이터를 볼 때 Overall Quality와 SalePrice 변수간의 관계성은 이미 시각화했지만, 
 빈도 분포도 나타내고 싶다. 이번 섹션에선 다른 Quality들도 번들로 묶어 나타내겠다.
@@ -1449,7 +1449,7 @@ Garage Quality는 대부분이 Q3에 몰려 있어 구분이 쉽지 않다.
 Fireplace Quality는 높은 상관 계수 항목과 중요한 변수 항목안에 있다.
 PoolQC는 매우 드물다.(이 규모에선 13개 풀은 보이지조차 않는다.) 나중에 pool 유무를 변수로 만들겠다.
 
-###6.2.4 The second most important categoriacal variables; MSSubClass
+### 6.2.4 The second most important categoriacal variables; MSSubClass
 
  첫 번째 차트는 MSSubClass의 SalePrice 중위값을 시각화한 것이다. 
 train data 기준 각각의 MsSubClass에 따른 집의 개수를 라벨링하였다.
@@ -1471,7 +1471,7 @@ ms2 <- ggplot(all, aes(x = MSSubClass)) +
 grid.arrange(ms1, ms2)
 ```
 
-###6.2.5 Garage variables
+### 6.2.5 Garage variables
 
  몇 몇 Garage 변수는 SalePrice와 높은 상관 관계를 가지고 있고, quick random forest의 top20 리스트에도 들어 있다.
 그러나 그들간에 다중 공선성이 있고, 7개 Garage 변수는 너무 많아 보인다.
@@ -1507,7 +1507,7 @@ multiplot(g1, g2, g3, g4, g5, g6, g7, layout = layout)
  4.2 섹션에서 이미 설명을 했듯이 GarageCars와 GarageArea는 높은 상관 관계를 가진다.
 여기에선 GarageQual과 GarageCond 역시 높은 상관 관계를 가지는 걸로 보이고, 3레벨의 개수가 가장 많다.
 
-###6.2.6 Basement variables
+### 6.2.6 Basement variables
 
  Garage 변수와 비슷하게, 상관 행렬과 top20 RF 독립 변수 list 내의 다양한 basement 변수들도 중요하다.
 그러나, 11 Basement 변수는 너무 과잉으로 보인다. 작업하기 전에 이 중 8개를 시각화 하겠다
@@ -1541,9 +1541,9 @@ multiplot(b1, b2, b3, b4, b5, b6, b7, b8, layout = layout)
 
 Basement Quality는 지하실 높이를 구체적으로 평가한다는 점에서 혼란을 주는 변수 명이다.
 
-#7 Feature engineering
+# 7 Feature engineering
 
-##7.1 Total number of Bathrooms
+## 7.1 Total number of Bathrooms
 
  4개의 Bathroom 관련 변수는 개별적으론 그다지 중요하지 않아 보인다. 
 하지만, 만약 여기에 하나의 독립 변수를 추가한다면 그건 아주 강력한 요인이 될 것이다
@@ -1568,7 +1568,7 @@ tb2 <- ggplot(all, aes(x = as.factor(ToBathrooms))) +
 grid.arrange(tb1, tb2)
 ```
 
-##7.2 Adding 'House Age', 'Remodeled (Yes/No)', and IsNew Variables
+## 7.2 Adding 'House Age', 'Remodeled (Yes/No)', and IsNew Variables
 
  집의 년수와 관련된 3개의 변수가 있다. 'YearBlt', 'YearRemodAdd', 'YearSold'
 증축/리모델링을 하지 않을 시 'YearRemodAdd'는 'YearBuilt'의 값으로 기본 설정된다.
@@ -1628,7 +1628,7 @@ ggplot(all[!is.na(all$SalePrice),], aes(x = as.factor(IsNew), y = SalePrice)) +
 all$YrSold <- as.factor(all$YrSold) # numeric 변수 버전은 더이상 필요하지 않다.
 ```
 
-##7.3 Binning Neighborhood
+## 7.3 Binning Neighborhood
 
 ```{r}
 nb1 <- ggplot(all[!is.na(all$SalePrice),], 
@@ -1664,7 +1664,7 @@ all$NeighRich[all$Neighborhood %in% c('MeadowV', 'IDOTRR', 'BrDale')] <- 0
 table(all$NeighRich)
 ```
 
-##7.4 Total Square Feet
+## 7.4 Total Square Feet
 
  사람들이 집을 살 때 일반적으로 총 거주 공간은 아주 중요하다. 지상 + 지하의 공간을 더해 독립 변수를 만들겠다.
 
@@ -1692,7 +1692,7 @@ cor(all$SalePrice, all$TotalSqFeet, use = 'pairwise.complete.obs') #결측치있
 cor(all$SalePrice[-c(524, 1299)], all$TotalSqFeet[-c(524, 1299)], use = 'pairwise.complete.obs')
 ```
 
-##7.5 Consolidating Porch variables
+## 7.5 Consolidating Porch variables
 
  아래와 같이, 현관(Porch)과 관련된 변수들을 리스트했다.
 

@@ -3,7 +3,7 @@ title: "House Prices Prediction with R (한글 번역) Modeling"
 author: "Creed Maestro"
 date: "2019/03/21"
 categories: Kaggle
-tags: Kaggle
+tags: Kaggle, R, 집값예측
 layout: post
 output: 
   md_document:
@@ -11,9 +11,9 @@ output:
     
 ---
 
-#8 Preparing data for modeling
+# 8 Preparing data for modeling
 
-##8.1 Dropping highly correlated variables
+## 8.1 Dropping highly correlated variables
 
  상관 관계가 높은 두 변수가 있다면 한 변수를 삭제하겠다. 상관 관계 짝을 찾기 위해, 섹션 6.1에서 다룬 상관 행렬을 쓰겠다. 예를 들어 'Garage Cars' & 'GarageArea' 의 상관 계수가 0.89이다. 둘 중 판매가와 상관 관계가 낮은 변수 하나를 지우겠다. ('GarageArea'와 'SalePrice'의 상관 계수 0.62, "GarageCars"와 'SalePrice'의 상관 계수 0.64)
 
@@ -23,7 +23,7 @@ dropVars <- c('YearRemodAdd', 'GarageYrBlt', 'GarageArea', 'GarageCond', 'TotalB
 all <- all[,!(names(all) %in% dropVars)]
 ```
 
-##8.2 Removing outliers
+## 8.2 Removing outliers
 
  낮은 판매가 대비 면적이 컸던 두 채의 집을 이상치로 잡고 제거하겠다. 그러나, 후에 자세히 조사하겠다.
 ('outliers' 패키지를 사용해서)
@@ -32,7 +32,7 @@ all <- all[,!(names(all) %in% dropVars)]
 all <- all[-c(524, 1299), ]
 ```
 
-##8.3 PreProcessing predicor variables
+## 8.3 PreProcessing predicor variables
 
  모델링 전에 라벨링 인코딩하지 않은 숫자형 독립 변수를 조정하겠다. 
 그리고 범주형 독립 변수를 위해 더미 변수를 만들겠다. 
@@ -50,7 +50,7 @@ DFfactors <- DFfactors[, names(DFfactors) != 'SalePrice']
 cat('There are', length(DFnumeric), 'numeric variables, and', length(DFfactors), 'factor variables')
 ```
 
-###8.3.1 Skewness and normalizing of the numeric predictors
+### 8.3.1 Skewness and normalizing of the numeric predictors
 
  Skewness(왜곡)는 분포에서 대칭을 측정한 것이다. 대칭 데이터셋의 왜곡은 0이다. 
 그래서, 정규 분포는 왜곡이 0일 것이다. 왜곡은 원래 양측 꼬리의 상대적 크기를 측정한다.
@@ -76,7 +76,7 @@ DFnorm <- predict(PreNum, DFnumeric)
 dim(DFnorm)
 ```
 
-###8.3.2 One hot encoding the categorical variables
+### 8.3.2 One hot encoding the categorical variables
 
  마지막으로, 최상의 머신러닝 알고리즘을 위해 모든 독립 변수를 'one-hot encode' 하여 범주형 변수인 숫자 컬럼으로 변환하겠다. 즉, model.matrix()함수를 써서 범주형 값을 1과 0으로 컬럼을 분리하겠다.(1은 Yes) 
 
@@ -85,7 +85,7 @@ DFdummies <- as.data.frame(model.matrix(~.-1, DFfactors))
 dim(DFdummies)
 ```
 
-###8.3.3 Removing levels with few or no observation in train or test
+### 8.3.3 Removing levels with few or no observation in train or test
 
  이전 버전에서, 'Caret'패키지의 'Near Zero Variance' 함수를 썻다. 이건 빠르지만, 정보의 손실이 너무 크다.
 이걸 기본으로 설정하여 'one-hot encode'하면 모든 동네에서 최소 146채의 주택 변수가 생략된다.
@@ -120,7 +120,7 @@ dim(DFdummies)
 combined <- cbind(DFnorm, DFdummies) # 컬럼 결합으로 데이터프레임 생성
 ```
 
-##8.4 Dealing with skewness of response variable
+## 8.4 Dealing with skewness of response variable
 
 ```{r}
 skew(all$SalePrice)
@@ -146,16 +146,16 @@ qqnorm(all$SalePrice)
 qqline(all$SalePrice)
 ```
 
-##8.5 Composing train and test sets
+## 8.5 Composing train and test sets
 
 ```{r}
 train1 <- combined[!is.na(all$SalePrice),]
 test1 <- combined[is.na(all$SalePrice),]
 ```
 
-#9 Modeling
+# 9 Modeling
 
-##9.1 Lasso regression model
+## 9.1 Lasso regression model
 
  Ridge, Elastic Net model, Lasso 3가지 모델을 시도했는데 Lasso가 제일 나은 결과라서 Lasso만 적겠다.
 elastic-net 패널티는 알파와 Lasso(alpha = 1) & ridge(alpha = 0)간의 갭 사이에서 조정된다.
@@ -193,7 +193,7 @@ predictions_lasso <- exp(LassoPred) #로그를 실수로 변환.
 head(predictions_lasso)
 ```
 
-##9.2 XGBoost model
+## 9.2 XGBoost model
 
  처음에는 XGBoost 패키지로 직접 작업했다. 'xgb.Dmatrix'라는 그것의 특별한 데이터 구조를 쓰기 위해서였다.
 이 패키지 역시 교차 검증을 지원한다.
@@ -277,7 +277,7 @@ mat <- xgb.importance(feature_names = colnames(train1), model = xgb_mod)
 xgb.ggplot.importance(importance_matrix = mat[1:20], rel_to_first = TRUE)
 ```
 
-##9.3 Averaging predictions
+## 9.3 Averaging predictions
 
  Lasso와 XGBoost의 알고리즘이 매우 달라서 평균 예측으로 점수가 향상 될 수 있다.
 Lasso 모델이 교차 검증된 RMSE 점수(0.1121 versus 0.1162)가 더 좋으므로, lasso model에 weighting을 2배로 하겠다.
@@ -291,11 +291,11 @@ write.csv(sub_avg, file = 'average.csv', row.names = F)
 ---
 
 
-#10 Ref.
+# 10 Ref.
 
 원문: https://www.kaggle.com/erikbruin/house-prices-lasso-xgboost-and-a-detailed-eda/report
 원저자: Erik Bruin
 
-#11 Kaggle 커널 링크
+# 11 Kaggle 커널 링크
 
 [캐글링크](https://www.kaggle.com/maestroyi/house-prices-prediction-with-r-to-korean/report?scriptVersionId=12633146)
