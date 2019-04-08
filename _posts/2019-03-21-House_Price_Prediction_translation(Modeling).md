@@ -1,6 +1,6 @@
 ---
 title: "House Prices Prediction with R (한글 번역) Modeling"
-author: "Maestro"
+author: "Creed Maestro"
 date: "2019/03/21"
 categories: Kaggle
 tags: Kaggle

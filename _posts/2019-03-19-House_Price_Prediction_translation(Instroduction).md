@@ -1,9 +1,9 @@
 ---
 title: "House Prices Prediction with R (한글 번역) Introduction ~ 데이터 구조, 대표 변수 확인"
-author: "Maestro"
+author: "Creed Maestro"
 date: "2019/03/19"
 categories: Kaggle
-tags: Kaggle, R, 집값 예측
+tags: Kaggle, R, 집값예측
 layout: post
 output: 
   md_document:
@@ -27,6 +27,7 @@ Rstudio상으로 돌려보길 원하시는 분들은 아래에 커널 링크를 
 1. Introduction ~ 데이터 구조, 대표 변수 확인
 2. EDA, FE
 3. Modeling
+
 ***
 
 #2 Executive Summary
@@ -191,3 +192,5 @@ ggplot(data = all[!is.na(all$SalePrice),], aes(x = GrLivArea, y = SalePrice)) +
 ```{r}
 all[c(524, 1299), c('SalePrice', 'GrLivArea', 'OverallQual')]
 ```
+
+<br>
