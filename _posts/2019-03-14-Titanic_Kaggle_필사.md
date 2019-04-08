@@ -1041,10 +1041,12 @@ write.csv(submit, file = './titanic_submit.csv', row.names = F)
 
 7. 머신러닝 탐구생활(비제이퍼블릭), 정권우 지음, 979-11-86697-69-6 : Data 분석 노트(표) 작성하는데 많은 도움을 받았습니다.
 
+8. [원저자 원문 링크](https://www.kaggle.com/redhorse93/r-titanic-data)
+
 <br>
 
-# 8. 원문 링크 
+# 8. 캐글 필사 커널 링크
 
-[원문 링크](https://www.kaggle.com/redhorse93/r-titanic-data)
+[캐글 링크]  (https://www.kaggle.com/maestroyi/kako-titanic-data-0312)
 
 <br>
