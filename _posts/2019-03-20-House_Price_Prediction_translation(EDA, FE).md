@@ -11,7 +11,10 @@ output:
 
 ---
 
+
+
 #5 Missing data, label encoding, and factorizing variables
+[캐글 Rmd 링크](https://www.kaggle.com/maestroyi/house-prices-prediction-with-r-to-korean/report?scriptVersionId=12633146)
 
 ##5.1 Completeness of the data
 
