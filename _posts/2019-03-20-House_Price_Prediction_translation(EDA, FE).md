@@ -3,7 +3,7 @@ title: "House Prices Prediction with R (한글 번역) EDA & FE "
 author: "Creed Maestro"
 date: "2019/03/20"
 categories: Kaggle
-tags: Kaggle
+tags: Kaggle, R, 집값예측
 layout: post
 output: 
   md_document:
