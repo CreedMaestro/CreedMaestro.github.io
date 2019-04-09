@@ -62,6 +62,9 @@ descriptions:
   - cat: R
     desc: "R Language"
 
+  - cat: Domain
+    desc: "Culture, Business, Background knowledge"
+
 # Social icons and sharing options
 #
 # Social settings are used in two places:
