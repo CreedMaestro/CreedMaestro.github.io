@@ -1,9 +1,10 @@
 ---
 title: "캐글코리아 2nd Competition House Price Prediction with R (시애틀 집값 예측) Introduction ~ EDA"
 author: "Maestro"
-date: "2019년 3월 14일"
+date: "2019/04/10"
 categories: Kaggle
 tags: Kaggle, 캐글, 캐글코리아
+layout: post
 output: 
   md_document:
     variant: markdown_github
