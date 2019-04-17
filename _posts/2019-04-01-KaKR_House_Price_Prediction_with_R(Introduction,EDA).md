@@ -5,11 +5,8 @@ date: "2019년 3월 14일"
 categories: Kaggle
 tags: Kaggle, 캐글, 캐글코리아
 output: 
-  html_document:
-    number_sections: true
-    toc: true
-    toc_depth: 3
-    theme: paper
+  md_document:
+    variant: markdown_github
 ---
 
 
