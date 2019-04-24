@@ -1,9 +1,9 @@
 ---
 title: "캐글코리아 2nd Competition House Price Prediction with R (시애틀 집값 예측) Introduction ~ EDA"
 author: "Maestro"
-date: "2019/04/10"
+date: "2019/04/05"
 categories: Kaggle
-tags: Kaggle, 캐글, 캐글코리아
+tags: Kaggle, 캐글, 캐글코리아, 집값예측
 layout: post
 output: 
   md_document:
@@ -20,7 +20,7 @@ output:
  설명과 첨언의 글이 많아 이후 경어는 생략하고 진행하겠습니다.
 
  [원문 링크] ( md 파일이라 rmd 문법이 맞지 않아 수정해서 올리니, 캐글로 들어온 분들이라면 원문 링크로 들어가서 확인 바란다.)
-   (https://www.kaggle.com/maestroyi/house-price-prediction-with-r-eda-fe/report?scriptVersionId=13035134)
+   ("https://www.kaggle.com/maestroyi/house-price-prediction-with-r-eda-fe/report")
  
  참조 
  
@@ -622,7 +622,7 @@ multiplot(k_q1, k_q2, k_q3, layout = k_layout)
 
 ### 4.8.3 Seperated date variables
 
-연별, 월별 구매량을 date변수를 분할하여 알아보겠다.
+연별, 월별 구매량을 date 변수를 분할하여 알아보겠다.
 
 ```{r}
 k_all[, Yrbuy:=substr(date, 1,4)]    # 연간 구매 확인 위해 변수 생성
@@ -673,4 +673,4 @@ multiplot(k_y1, k_y2, k_y3, k_y4, layout = k_layout)
 FE와 모델링은 추후에 업로드 예정
 
 [캐글 RMD Report 링크]
-("https://www.kaggle.com/maestroyi/house-price-prediction-with-r-eda-fe/report?scriptVersionId=13035134")
+("https://www.kaggle.com/maestroyi/house-price-prediction-with-r-eda-fe/report")
