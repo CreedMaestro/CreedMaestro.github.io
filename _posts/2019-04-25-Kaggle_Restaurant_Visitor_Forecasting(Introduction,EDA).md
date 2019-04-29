@@ -23,6 +23,9 @@ Time-series 분석이며, 일본 2개 웹사이트(hpg & AirREGI)에서 나온 8
 Train set은 2016년 1월 ~ 2017년 4월이며, Test set은 2017년 4월 마지막 주 ~ 5월까지 포함한다.
 Test set은 일본에서 'Golden Week'라고 불리는 기간이다. 이 때는 폐점한 식당과 고객이 없는 날들이 있어 이 구간은 점수 산정에서 제외한다. Train set 역시 식당이 폐점한 날은 제외한다.
 현재 작업중인 파일이라 일단락이 된 후에 캐글에 업로드 예정이다.
+파일 몇 개를 조합하여 커널을 만들 예정이며, 조합 전 파일들은 참조로 달아두겠다.
+
+[EDA]("https://www.kaggle.com/headsortails/be-my-guest-recruit-restaurant-eda/report")
 
 각 파일의 간략한 설명:
 
