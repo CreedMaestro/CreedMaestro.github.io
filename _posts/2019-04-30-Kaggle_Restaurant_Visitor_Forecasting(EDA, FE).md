@@ -1,9 +1,9 @@
 ---
-title: "캐글 Restaurant Visitor Forecasting Introduction, EDA"
+title: "캐글 Restaurant Visitor Forecasting Introduction, EDA[2]"
 author: "Maestro"
-date: "2019/04/25"
+date: "2019/04/30"
 categories: Kaggle
-tags: Kaggle, 캐글, 캐글코리아, 고객예측
+tags: Kaggle, 캐글, 캐글코리아, 고객예측, Restaurant
 layout: post
 output: 
   md_document:
