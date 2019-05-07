@@ -2,7 +2,7 @@
 title: "캐글코리아 2nd Competition House Price Prediction with R (시애틀 집값 예측) FE"
 author: "Maestro"
 date: "2019/04/10"
-categories: Kaggle
+categories: Project
 tags: Kaggle, 캐글, 캐글코리아, 집값예측
 layout: post
 output: 
