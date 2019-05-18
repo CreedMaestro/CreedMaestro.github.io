@@ -3,7 +3,7 @@ title: "캐글 Restaurant Visitor Forecasting Feature Engineering"
 author: "Maestro"
 date: "2019/05/05"
 categories: Kaggle
-tags: Kaggle, 캐글, 캐글코리아, 고객예측, Restaurant
+tags: Kaggle, 캐글, 고객예측, Restaurant, TimeSeries, 시계열
 layout: post
 output: 
   md_document:
