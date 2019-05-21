@@ -1,5 +1,5 @@
 ---
-title: "캐글 Restaurant Visitor Forecasting Forecasting method & Weather data"
+title: "캐글 Restaurant Visitor Forecasting Forecasting method & Weather data with R(한글 번역)"
 author: "Maestro"
 date: "2019/05/15"
 categories: Kaggle

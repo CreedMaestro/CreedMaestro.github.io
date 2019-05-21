@@ -1,5 +1,5 @@
 ---
-title: "캐글 Restaurant Visitor Forecasting Introduction, EDA"
+title: "캐글 Restaurant Visitor Forecasting Introduction, EDA with R (한글 번역)"
 author: "Maestro"
 date: "2019/04/25"
 categories: Kaggle

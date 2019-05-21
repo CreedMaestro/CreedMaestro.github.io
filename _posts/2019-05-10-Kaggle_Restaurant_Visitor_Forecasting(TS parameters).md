@@ -1,5 +1,5 @@
 ---
-title: "캐글 Restaurant Visitor Forecasting Time Series parameters & Forecasting method"
+title: "캐글 Restaurant Visitor Forecasting Time Series parameters & Forecasting method with R (한글 번역)"
 author: "Maestro"
 date: "2019/05/10"
 categories: Kaggle

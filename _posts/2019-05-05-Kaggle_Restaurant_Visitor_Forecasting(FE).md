@@ -1,5 +1,5 @@
 ---
-title: "캐글 Restaurant Visitor Forecasting Feature Engineering"
+title: "캐글 Restaurant Visitor Forecasting Feature Engineering with R (한글 번역)"
 author: "Maestro"
 date: "2019/05/05"
 categories: Kaggle
