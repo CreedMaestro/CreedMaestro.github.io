@@ -362,4 +362,6 @@ multiplot(p1, p2, p3, layout = layout)
 
 - 여기서도 'air'의 9개 현의 평균 고객수에서 특별히 다른점을 찾지 못하겠다. 가능한 모든 변형은 error bar의 크기보다 작다.
 
+[캐글 번역 링크, Restaurant_visitor_Forecasting]("https://www.kaggle.com/maestroyi/restaurant-visitor-forecasting-eda-with-r?scriptVersionId=14464395")
+
 [원저자 링크]("https://www.kaggle.com/headsortails/be-my-guest-recruit-restaurant-eda/report")
