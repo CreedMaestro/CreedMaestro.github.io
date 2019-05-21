@@ -405,7 +405,7 @@ multiplot(p1, p2, p3, p4, layout = layout)
 
 # 10 Ref
 
-[캐글 번역 링크, Restaurant_visitor_Forecasting]("https://www.kaggle.com/maestroyi/restaurant-visitor-forecasting-eda-with-r?scriptVersionId=14464395")
-[원문 링크, original by Heads or Tails]("https://www.kaggle.com/headsortails/be-my-guest-recruit-restaurant-eda/report")
-[날씨 자료 링크, Wiki Traffic Forecast Exploration]("https://www.kaggle.com/headsortails/wiki-traffic-forecast-exploration-wtf-eda")
-[ARIMA model by Timlee]("https://www.kaggle.com/timolee/feeling-hungry-a-beginner-s-guide-to-arima-models")
+[캐글 번역 링크, Restaurant_visitor_Forecasting](https://www.kaggle.com/maestroyi/restaurant-visitor-forecasting-eda-with-r?scriptVersionId=14464395)
+[원문 링크, original by Heads or Tails](https://www.kaggle.com/headsortails/be-my-guest-recruit-restaurant-eda/report)
+[날씨 자료 링크, Wiki Traffic Forecast Exploration](https://www.kaggle.com/headsortails/wiki-traffic-forecast-exploration-wtf-eda)
+[ARIMA model by Timlee](https://www.kaggle.com/timolee/feeling-hungry-a-beginner-s-guide-to-arima-models)

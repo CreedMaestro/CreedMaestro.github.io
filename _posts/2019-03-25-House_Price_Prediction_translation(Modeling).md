@@ -293,9 +293,10 @@ write.csv(sub_avg, file = 'average.csv', row.names = F)
 
 # 10 Ref.
 
-원문: https://www.kaggle.com/erikbruin/house-prices-lasso-xgboost-and-a-detailed-eda/report
+[원문:](https://www.kaggle.com/erikbruin/house-prices-lasso-xgboost-and-a-detailed-eda/report)
 원저자: Erik Bruin
 
 # 11 Kaggle 커널 링크
+[커널 링크](https://www.kaggle.com/maestroyi/house-prices-prediction-with-r-to-korean/report?scriptVersionId=12633146)
 
 [캐글링크](https://www.kaggle.com/maestroyi/house-prices-prediction-with-r-to-korean/report?scriptVersionId=12633146)

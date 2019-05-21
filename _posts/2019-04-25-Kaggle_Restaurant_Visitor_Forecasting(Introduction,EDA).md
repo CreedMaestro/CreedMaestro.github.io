@@ -25,8 +25,8 @@ Test set은 일본에서 'Golden Week'라고 불리는 기간이다. 이 때는 
 현재 작업중인 파일이라 일단락이 된 후에 캐글에 업로드 예정이다.
 파일 몇 개를 조합하여 커널을 만들 예정이며, 조합 전 파일들은 참조로 달아두겠다.
 
-[heads or tails 원문 링크, EDA]("https://www.kaggle.com/headsortails/be-my-guest-recruit-restaurant-eda/report")
-[캐글 번역 링크, Restaurant_visitor_Forecasting]("https://www.kaggle.com/maestroyi/restaurant-visitor-forecasting-eda-with-r?scriptVersionId=14464395")
+[heads or tails 원문 링크, EDA](https://www.kaggle.com/headsortails/be-my-guest-recruit-restaurant-eda/report)
+[캐글 번역 링크, Restaurant_visitor_Forecasting](https://www.kaggle.com/maestroyi/restaurant-visitor-forecasting-eda-with-r?scriptVersionId=14464395)
 
 각 파일의 간략한 설명:
 

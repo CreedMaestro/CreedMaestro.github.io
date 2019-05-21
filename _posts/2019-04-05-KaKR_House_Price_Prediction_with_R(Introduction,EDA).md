@@ -64,7 +64,7 @@ library(caret)       # preProcess
 <br>
 ## 2.2 Load Data
 ```{r}
-# 데이터는 [competition 데이터셋]("https://www.kaggle.com/c/2019-2nd-ml-month-with-kakr/data") 에서 받을 수 있다.
+# 데이터는 [competition 데이터셋](https://www.kaggle.com/c/2019-2nd-ml-month-with-kakr/data) 에서 받을 수 있다.
 k_train <- fread("./kako 2nd/train.csv")
 k_test  <- fread("./kako 2nd/test.csv")
 ```

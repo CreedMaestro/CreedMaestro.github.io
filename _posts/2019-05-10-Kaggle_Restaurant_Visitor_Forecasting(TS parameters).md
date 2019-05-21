@@ -493,4 +493,4 @@ multiplot(p1, p2, layout=layout)
 
 - 공휴일을 포함하니 골든 위크 고객 예측에 미묘한 개선이 있다. training set에 휴일이 더 포함되면 이 요소의 성능이 개선될 수 있지만, 이것을 검증하는 건 어려워 보인다.
 
-[캐글 번역 링크, Restaurant_visitor_Forecasting]("https://www.kaggle.com/maestroyi/restaurant-visitor-forecasting-eda-with-r?scriptVersionId=14464395")
+[캐글 번역 링크, Restaurant_visitor_Forecasting](https://www.kaggle.com/maestroyi/restaurant-visitor-forecasting-eda-with-r?scriptVersionId=14464395)

@@ -391,6 +391,6 @@ all_reserve %>%
 
 - 공휴일엔 예약후 방문객보다 바로 방문하는 사람들이 많음을 볼 수 있다. 피크는 거의 동일하지만, 큰 수에 대해서는 작지만 분명한 차이를 볼 수 있다.
 
-[캐글 번역 링크, Restaurant_visitor_Forecasting]("https://www.kaggle.com/maestroyi/restaurant-visitor-forecasting-eda-with-r?scriptVersionId=14464395")
+[캐글 번역 링크, Restaurant_visitor_Forecasting](https://www.kaggle.com/maestroyi/restaurant-visitor-forecasting-eda-with-r?scriptVersionId=14464395)
 
-[원저자 링크]("https://www.kaggle.com/headsortails/be-my-guest-recruit-restaurant-eda/report")
+[원저자 링크](https://www.kaggle.com/headsortails/be-my-guest-recruit-restaurant-eda/report)
